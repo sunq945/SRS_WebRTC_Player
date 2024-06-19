@@ -280,7 +280,7 @@
             console.log('Start play, event: ', event);
             $('#rtc_media_player').prop('srcObject', event.stream);
           };
-
+		alert('before clall WeixinJSBridgeReady');
           //var url = 'webrtc://192.168.1.27/live/test';
 		var url = 'webrtc://192.168.1.112/live/livestream';
 			document.addEventListener('WeixinJSBridgeReady',function(){
