@@ -284,7 +284,16 @@
           //var url = 'webrtc://192.168.1.27/live/test';
 		var url = 'webrtc://192.168.1.112/live/livestream';
 			document.addEventListener('WeixinJSBridgeReady',function(){
-			alert(url);
+			     wx.miniProgram.redirectTo({
+			        url: "/pages/index/index?id=1", // id:所需参数
+			        success: (res) => {
+			          console.log(res); // 页面跳转成功
+			        },
+			        fail: (err) => {
+			          console.log(err); // 页面跳转失败
+			        },
+			      });
+
 		        sdk
 		          .play(url)
 		          .then(function (session) {
